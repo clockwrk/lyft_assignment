@@ -3,6 +3,7 @@
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
+const PORT = process.env || 3000
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
@@ -17,4 +18,4 @@ app.post('/test', (req, res) => {
   res.send(response)
 })
 
-app.listen(process.env || 3000, () => console.log('listening on port 3000'))
+app.listen(PORT, () => console.log('listening on port 3000'))

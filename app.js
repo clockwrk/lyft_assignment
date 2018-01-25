@@ -5,13 +5,14 @@ const bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-app.get('/test', (req, res) => {
-  var response = {}
+app.post('/test', (req, res) => {
+  var response = {},
+      firstNum = parseInt(req.body.x)||0,
+      secondNum = parseInt(req.body.y)||0
 
-  response.sum = 5;
-  console.log('response',res)
+  response.sum = firstNum + secondNum
+
   res.send(response)
-
 })
 
 app.listen(3000, () => console.log('listening on port 3000'))

@@ -9,6 +9,7 @@ To run in a terminal
 3. npm install
 4. node app.js
 5. Press command + T
-5. In new terminal window, curl -X POST https://localhost:3000/test --data '{"x": 4, "y": 2}' -H 'Content-Type: application/json'
+5. In new terminal window, 
+  curl -X POST https://localhost:3000/test --data '{"x": 4, "y": 2}' -H 'Content-Type: application/json'
 
 Observe you will get back an object with a key of sum and a value of 6.
